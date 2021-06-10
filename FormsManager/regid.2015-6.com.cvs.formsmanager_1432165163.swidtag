@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<swid:software_identification_tag id="e_1"
+ xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+ xmlns:swid="http://standards.iso.org/iso/19770/-2/2009/schema.xsd"
+ xsi:schemaLocation="http://standards.iso.org/iso/19770/-2/2009/schema.xsd"
+>
+<!-- Created by:   MagniComp's(tm) Software Tag Maker(tm) -->
+<!-- Creator URL:  http://www.MagniComp.com -->
+<!-- Created Date: 2015-05-20 -->
+    <swid:entitlement_required_indicator id="e_2">true</swid:entitlement_required_indicator>
+    <swid:product_title id="e_3">Coram Forms Manager</swid:product_title>
+    <swid:product_version>
+        <swid:name id="e_4">2015 R1</swid:name>
+        <swid:numeric>
+            <swid:major id="e_5">1</swid:major>
+            <swid:minor id="e_6">1</swid:minor>
+            <swid:build id="e_7">2</swid:build>
+            <swid:review id="e_8">011</swid:review>
+        </swid:numeric>
+    </swid:product_version>
+    <swid:software_creator>
+        <swid:name id="e_9">CVS Health</swid:name>
+        <swid:regid id="e_10">regid.2015-06.com.cvs</swid:regid>
+    </swid:software_creator>
+    <swid:software_licensor>
+        <swid:name id="e_11">CVS Health</swid:name>
+        <swid:regid id="e_12">regid.2015-06.com.cvs</swid:regid>
+    </swid:software_licensor>
+    <swid:tag_creator>
+        <swid:name id="e_13">CVS Health</swid:name>
+        <swid:regid id="e_14">regid.2015-06.com.cvs</swid:regid>
+    </swid:tag_creator>
+    <swid:abstract id="e_15">Build, deploy, and store form data</swid:abstract>
+    <swid:data_source id="e_16">SQL</swid:data_source>
+    <swid:location_installation id="e_17">C:\Program Files\Coram Healthcare\Coram Forms Manager</swid:location_installation>
+    <swid:product_id id="e_18"></swid:product_id>
+    <swid:sku id="e_19"></swid:sku>
+    <swid:serial_number id="e_20"></swid:serial_number>
+<swid:software_identification_tag>

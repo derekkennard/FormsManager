@@ -1,0 +1,41 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
+              GeneratedClassNamespace="DataLogic.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="sqlGetClinicalReasons" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">EXEC [dbo].[uspLoad_GetClinicalReasons_Cor551240415V1]</Value>
+    </Setting>
+    <Setting Name="SqlGetPatient" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">EXEC [dbo].[uspGet_PatientSearch_Cor551240415V1]</Value>
+    </Setting>
+    <Setting Name="SqlLoadNote" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">[dbo].[uspLoad_PatientData_Cor551240415V1]</Value>
+    </Setting>
+    <Setting Name="SqlGetId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">EXEC [dbo].[uspGet_MaxNoteId_Cor551240415V1] </Value>
+    </Setting>
+    <Setting Name="SqlInsertNoteData" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">uspLoad_SubTables_Cor551240415V1</Value>
+    </Setting>
+    <Setting Name="SqlRetrieveData" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">EXEC [dbo].[uspGet_RetrievePatData_Cor551240415V1]</Value>
+    </Setting>
+    <Setting Name="SqlSignNote" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">uspLoad_SignedNote_Cor551240415V1</Value>
+    </Setting>
+    <Setting Name="SqlUpdateForm" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">uspLoad_UpdateForm_Cor551240415V1</Value>
+    </Setting>
+    <Setting Name="SqlRemoveSign" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">uspRemove_SignedNoteValue_Cor551240415V1</Value>
+    </Setting>
+    <Setting Name="SqlAuditData" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">EXEC [dbo].[uspGet_AuditData_Cor551240415V1]</Value>
+    </Setting>
+    <Setting Name="SqlUpdateAuditData" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">uspLoad_UpdateAuditData_Cor551240415V1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

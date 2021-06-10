@@ -1,0 +1,272 @@
+﻿<Window x:Class="FormsManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:businessLogic="clr-namespace:BusinessLogic;assembly=BusinessLogic"
+        mc:Ignorable="d"
+        Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={businessLogic:RatioConverter}, ConverterParameter='0.7' }"
+        Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}, Converter={businessLogic:RatioConverter}, ConverterParameter='0.7' }"
+        Title="Forms Manager" SnapsToDevicePixels="True" UseLayoutRounding="True"
+        WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" BorderThickness="0" Cursor="Arrow"
+        Icon="Resources/formsIcon.ico" Loaded="Window_Loaded" WindowState="Maximized"
+        BorderBrush="Blue" Background="White" WindowStyle="ThreeDBorderWindow" SizeChanged="CenterWindowOnScreen" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+    <Window.Resources>
+        <Style TargetType="GridViewColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        </Style>
+
+        <DataTemplate x:Key="SortHeader">
+            <Grid Margin="3,0" Grid.IsSharedSizeScope="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="15" SharedSizeGroup="ArrowHolder" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="15" SharedSizeGroup="ArrowHolder" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{Binding}" Grid.Column="1" HorizontalAlignment="Center" />
+                <Path x:Name="arrow" StrokeThickness="1" Fill="DarkGray" Visibility="Hidden" Grid.Column="2" />
+            </Grid>
+            <DataTemplate.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition
+                            Binding="{Binding Path=Column.(businessLogic:SortBehavior.CanUseSort),RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type GridViewColumnHeader}}}"
+                            Value="true" />
+                        <Condition
+                            Binding="{Binding Path=Column.(businessLogic:SortBehavior.SortDirection),RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type GridViewColumnHeader}}}"
+                            Value="Ascending" />
+                    </MultiDataTrigger.Conditions>
+                    <MultiDataTrigger.Setters>
+                        <Setter TargetName="arrow" Property="Data" Value="M 5,10 L 15,10 L 10,5" />
+                        <Setter TargetName="arrow" Property="Visibility" Value="Visible" />
+                    </MultiDataTrigger.Setters>
+                </MultiDataTrigger>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition
+                            Binding="{Binding Path=Column.(businessLogic:SortBehavior.CanUseSort),RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type GridViewColumnHeader}}}"
+                            Value="true" />
+                        <Condition
+                            Binding="{Binding Path=Column.(businessLogic:SortBehavior.SortDirection),RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type GridViewColumnHeader}}}"
+                            Value="Descending" />
+                    </MultiDataTrigger.Conditions>
+                    <MultiDataTrigger.Setters>
+                        <Setter TargetName="arrow" Property="Data" Value="M 5,5 L 10,10 L 15,5" />
+                        <Setter TargetName="arrow" Property="Visibility" Value="Visible" />
+                    </MultiDataTrigger.Setters>
+                </MultiDataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Margin="10,10,10,0">
+        <Grid.Resources>
+            <DataTemplate x:Key="TitleText">
+                <Border Height="30" SnapsToDevicePixels="True" Width="Auto" Visibility="Hidden">
+                    <TextBlock Text="{Binding}"
+                               Margin="0,4,0,0"
+                               HorizontalAlignment="Left"
+                               FontSize="16"
+                               FontFamily="Segoe UI"
+                               FontWeight="Bold"
+                               Width="{Binding
+                        RelativeSource={RelativeSource
+                        Mode=FindAncestor,
+                        AncestorType={x:Type Expander}},
+                        Path=ActualWidth}"
+                               TextWrapping="Wrap" FontStretch="Normal" UseLayoutRounding="True" />
+                </Border>
+            </DataTemplate>
+
+            <Style TargetType="{x:Type Expander}">
+                <Setter Property="HeaderTemplate" Value="{StaticResource TitleText}" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="331*" />
+            <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="4" Margin="10,10,10.333,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="125" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Source="Resources/MainLogo.png" Grid.Column="0"
+                    HorizontalAlignment="Left" Width="154" Margin="0,0,0,-0.333" />
+            <Image Grid.Row="0" Source="Resources/NewLogo.PNG"
+                   Margin="0,0,10,20" Grid.Column="1" HorizontalAlignment="Right" Width="375">
+                <Image.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <Label x:Name="LblBuildVersion" Content="" />
+                        </StackPanel>
+                    </ToolTip>
+                </Image.ToolTip>
+            </Image>
+
+        </Grid>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Margin="10,10,10.333,2.667"
+                      PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+            <Border BorderThickness="2">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0.2" />
+                        <GradientStop Color="White" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <StackPanel Margin="10,10,10,10">
+                    <Grid ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5" />
+                            <RowDefinition Height="65" />
+                            <RowDefinition Height="Auto" MinHeight="78" />
+                            <RowDefinition Height="10" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="1" Grid.Column="0"
+                               Content="Forms Search"
+                               HorizontalContentAlignment="Left" Margin="10,5,0,35"
+                               FontSize="10"
+                               FontStyle="Italic" FontWeight="SemiBold" HorizontalAlignment="Left" Width="74" />
+                        <TextBox x:Name="TBoxFormSearch" Grid.Row="1" Grid.Column="0" Margin="87,5,0,34"
+                                 TextChanged="tBoxFormSearch_TextChanged"
+                                 ToolTip="Search results are based on the Form Name or Description"
+                                 IsReadOnly="True" HorizontalAlignment="Left" Width="248" />
+                        <Label Grid.Row="1" Grid.Column="0"
+                               Content="Search is only available when the Forms category is expanded."
+                               HorizontalContentAlignment="Left" VerticalAlignment="Bottom" Margin="8,0,0,1.333"
+                               FontSize="10"
+                               FontStyle="Italic" FontWeight="SemiBold" HorizontalAlignment="Left" Width="314" Height="22" />
+                        <Expander Grid.Row="2" IsExpanded="True" Name="Exp1" Header="Forms &amp; Reports" Width="Auto"
+                                  Margin="10,9.667,10,10.333"
+                                  Expanded="Exp1_Expanded" Collapsed="Exp1_Collapsed" ClipToBounds="True" Cursor="Hand">
+                            <ListView d:DataContext="{d:DesignData }" Name="PharmacyLv"
+                                      IsSynchronizedWithCurrentItem="True"
+                                      businessLogic:SortBehavior.CanUserSortColumns="true">
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_PharmDoubleClick" />
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                                <ListView.View>
+                                    <GridView ColumnHeaderTemplate="{StaticResource SortHeader}">
+
+                                        <GridViewColumn Width="Auto"
+                                                        DisplayMemberBinding="{Binding FormCodePharm}"
+                                                        Header="Form/Doc #" />
+                                        <GridViewColumn Width="Auto"
+                                                        DisplayMemberBinding="{Binding FormDatePharm}"
+                                                        Header="Form/App Date" />
+                                        <GridViewColumn Width="Auto"
+                                                        DisplayMemberBinding="{Binding FormNamePharm}"
+                                                        Header="Form Name" />
+                                        <GridViewColumn Width="Auto"
+                                                        DisplayMemberBinding="{Binding FormDescPharm}"
+                                                        Header="Form Description" />
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </Expander>
+                        <!--<Expander Grid.Row="4" IsExpanded="False" Name="Exp2" Header="Nursing">
+							<ListView>
+								<ListView.View>
+									<GridView>
+										<GridViewColumn Width="120" Header="Date" />
+										<GridViewColumn Width="120"
+										                DisplayMemberBinding="{Binding DayOfWeek}"
+										                Header="Day Of Week" />
+										<GridViewColumn Width="120"
+										                DisplayMemberBinding="{Binding Year}"
+										                Header="Year" />
+									</GridView>
+								</ListView.View>
+								<ListViewItem>A ListView</ListViewItem>
+								<ListViewItem IsSelected="True">B ListView</ListViewItem>
+                                <ListViewItem>C ListView</ListViewItem>
+                            </ListView>
+						</Expander>
+						<Expander Grid.Row="6" IsExpanded="False" Name="Exp3" Header="Intake">
+							<ListView>
+								<ListView.View>
+									<GridView>
+										<GridViewColumn Width="120" Header="Date" />
+										<GridViewColumn Width="120"
+										                DisplayMemberBinding="{Binding DayOfWeek}"
+										                Header="Day Of Week" />
+										<GridViewColumn Width="120"
+										                DisplayMemberBinding="{Binding Year}"
+										                Header="Year" />
+									</GridView>
+								</ListView.View>
+                                <ListViewItem>DListView</ListViewItem>
+                                <ListViewItem IsSelected="True">EListView</ListViewItem>
+                                <ListViewItem>F ListView</ListViewItem>
+							</ListView>
+						</Expander>
+						<Expander Grid.Row="8" IsExpanded="False" Name="Exp4" Header="Operations">
+							<ListView>
+								<ListView.View>
+									<GridView>
+										<GridViewColumn Width="120" Header="Date" />
+										<GridViewColumn Width="120"
+										                DisplayMemberBinding="{Binding DayOfWeek}"
+										                Header="Day Of Week" />
+										<GridViewColumn Width="120"
+										                DisplayMemberBinding="{Binding Year}"
+										                Header="Year" />
+									</GridView>
+								</ListView.View>
+                                <ListViewItem>G ListView</ListViewItem>
+								<ListViewItem IsSelected="True">H ListView</ListViewItem>
+                                <ListViewItem>I ListView</ListViewItem>
+							</ListView>
+						</Expander>
+						<Expander Grid.Row="10" IsExpanded="False" Name="Exp5" Header="CSS">
+							<ListView>
+								<ListView.View>
+									<GridView>
+										<GridViewColumn Width="120" Header="Date" />
+										<GridViewColumn Width="120"
+										                DisplayMemberBinding="{Binding DayOfWeek}"
+										                Header="Day Of Week" />
+										<GridViewColumn Width="120"
+										                DisplayMemberBinding="{Binding Year}"
+										                Header="Year" />
+									</GridView>
+								</ListView.View>
+								<ListViewItem>J ListView</ListViewItem>
+                                <ListViewItem IsSelected="True">K ListView</ListViewItem>
+                                <ListViewItem>L ListView</ListViewItem>
+							</ListView>
+						</Expander>-->
+                    </Grid>
+                    <!--<Button HorizontalAlignment="Right" Margin="5,5,5,5" Content="Add Row" Click="AddRow_Click" />-->
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+        <!--<Label HorizontalContentAlignment="Right" Grid.Row="2" Grid.Column="2" Content="Powered by Razor Sharp Technology" FontWeight="Bold" Margin="0.333,0,0,-0.333" />-->
+        <Label HorizontalContentAlignment="Right" x:Name="LblVersion" Grid.Row="2" Grid.Column="3" Content="" FontWeight="Bold" Margin="0,2.333,0.333,-0.333" />
+        <Image x:Name="HelpLogo" Source="Resources/issue3.jpg" Margin="0,3.333,0,-0.333"
+               Grid.Row="2"
+               Grid.Column="0" MouseDown="Help_MouseDown" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="42" ToolTip="Enter Support Ticket" />
+        <!--<Image x:Name="CvsSharePoint" Source="Resources/" Margin="79,10,77,8" Grid.Row="2"
+               Grid.Column="1" MouseDown="CvsSharePoint_MouseDown" ToolTip="ONLY WORKS ON CVS DOMAIN"
+               HorizontalAlignment="Center" Width="125" Height="25" />
+        <Image x:Name="MyCoramLogo" Source="Resources/" Margin="103,8,76,10"
+               Grid.Row="2"
+               Grid.Column="2" MouseDown="MyCoramLogo_MouseDown" HorizontalAlignment="Center" Width="102" Height="25" />
+        <Image x:Name="MyHrLogo" Source="Resources/." Margin="117,8,101,10"
+               Grid.Row="2"
+               Grid.Column="3" MouseDown="MyHrLogo_MouseDown" HorizontalAlignment="Center" Width="63" Height="25" />-->
+    </Grid>
+</Window>

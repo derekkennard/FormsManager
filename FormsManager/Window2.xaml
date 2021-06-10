@@ -1,0 +1,23 @@
+﻿<Window x:Class="FormsManager.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Inspire" Height="298.868" Width="569.434" WindowStartupLocation="CenterScreen" UseLayoutRounding="True"
+        SnapsToDevicePixels="True" Icon="Resources/Form3.ico" Topmost="True">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/inspire2.jpg" />
+    </Window.Background>
+    <Grid>
+        <Label x:Name="InspireQuote" Margin="10,139,10,10" HorizontalAlignment="Center" VerticalAlignment="Center"
+               Width="541" Height="118">
+            <TextBlock Foreground="White" ForceCursor="True" FontWeight="SemiBold" FontStyle="Italic" FontSize="18"
+                       Width="531">
+                The best and most beautiful things in the world cannot be seen <LineBreak />or even touched - they must be felt with the heart.
+                <LineBreak /><LineBreak />Helen Keller
+            </TextBlock>
+        </Label>
+
+    </Grid>
+</Window>

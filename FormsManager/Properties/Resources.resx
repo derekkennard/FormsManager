@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Button1" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="Button2" xml:space="preserve">
+    <value>Button2</value>
+  </data>
+  <data name="Button3" xml:space="preserve">
+    <value>Button3</value>
+  </data>
+  <data name="DNU" xml:space="preserve">
+    <value>Don't show this again</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Form1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Form1.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Form2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Form2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Form3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Form3.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Form4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Form4.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Form5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Form5.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Form6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Form6.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Form7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Form7.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BusinessManager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BusinessManager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InotropeErrorTitle" xml:space="preserve">
+    <value>Inotropic Therpay Note Error</value>
+  </data>
+  <data name="inspire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inspire.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Main" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Main.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>[Message]</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>[Title]</value>
+  </data>
+  <data name="inspire2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inspire2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClinicalReviewMsg" xml:space="preserve">
+    <value>You are only saving the data. The form still requires clinical review and a signature.</value>
+  </data>
+  <data name="InvalidClientIdMsg" xml:space="preserve">
+    <value>The Client ID supplied was not found in the database. Please check the value and try again.</value>
+  </data>
+  <data name="InvalidClientIdTitle" xml:space="preserve">
+    <value>Missing/Invalid Client ID</value>
+  </data>
+  <data name="InvalidSaveTitle" xml:space="preserve">
+    <value>Save Failure</value>
+  </data>
+  <data name="InvalidSubmitMsg" xml:space="preserve">
+    <value>You tried to save the form before adding vital details. Please check the Patient's name and ID Number for values and try again.</value>
+  </data>
+  <data name="MissingInvalidTitle" xml:space="preserve">
+    <value>Missing or Invalid Data</value>
+  </data>
+  <data name="MissingRedTextSubmitMsg" xml:space="preserve">
+    <value>You are missing key fields. Your data will only be saved and not submitted to HCN. Please retrieve the form again and check you values.</value>
+  </data>
+  <data name="RecordSavedTitle" xml:space="preserve">
+    <value>Saved - Not Submitted</value>
+  </data>
+  <data name="RetrieveNullValueMsg" xml:space="preserve">
+    <value>Your search returned no results OR the patient's note has been submitted to HCN electronically. Please check HCN or the patient ID. </value>
+  </data>
+  <data name="SuccessfulSubmit" xml:space="preserve">
+    <value>Form Submission Success</value>
+  </data>
+  <data name="BusinessManager1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FormsManager.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InvalidAuditSubmit" xml:space="preserve">
+    <value>You tried to save the form before applying a valid signature. Please check the eSign name and date and try again.</value>
+  </data>
+  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SharePoint_logo_2013" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SharePoint_logo_2013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BusinessManagerRev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BusinessManagerRev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="graphs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\graphs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="graphs1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\graphs.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HandsPartnership" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HandsPartnership.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SEO_Performance_2__" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SEO_Performance_2__.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Task_Manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Task_Manager.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vector_65_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vector_65_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VolumeManager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VolumeManager.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="website_optimization__" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\website_optimization__.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tpn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tpn.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AbiOrderForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AbiOrderForm.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Baxter_6201_Tips" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baxter-6201-Tips.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CURLIN_PCA_Therapy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CURLIN_PCA_Therapy.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CURLIN_TPN_Therapy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CURLIN_TPN_Therapy.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CURLIN_Variable_Therapy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CURLIN_Variable_Therapy.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ma430Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ma430Form.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Curlin_IntermittentTherapy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Curlin_IntermittentTherapy.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="WashingtonStateInfusionGuideline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WashingtonStateInfusionGuideline.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AdvanceDirectiveMentalHealthTreatment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdvanceDirectiveMentalHealthTreatment.docx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HizentraInfusionGuide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HizentraInfusionGuide.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HomeInfusionSafetyGuide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HomeInfusionSafetyGuide.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HospiraInfusionGuide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HospiraInfusionGuide.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="IhpDiabetes7_29_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IhpDiabetes7.29.16.docx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="InfusionCaregiverGuide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InfusionCaregiverGuide.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NhsContinuingHealthcareDecisionSupportTool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NhsContinuingHealthcareDecisionSupportTool.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SapphireQuickStartGuide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SapphireQuickStartGuide.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SkilledNursingNote" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SkilledNursingNote.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="issue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="issue2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issue2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="issue3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issue3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AetnaIgTherapyPrecertificationRequestForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AetnaIgTherapyPrecertificationRequestForm.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BcBsIlManual" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BcBsIlManual.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HomeInfusionInjectableGuidelines" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HomeInfusionInjectableGuidelines.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HomeInfusionReferralForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HomeInfusionReferralForm.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HomeIvServicesPriorAuth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HomeIvServicesPriorAuth.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HyperemesisReferralForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HyperemesisReferralForm.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="IronPhysicianOrder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IronPhysicianOrder.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="IvigPhysOrder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IvigPhysOrder.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MedPharmHitValidation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MedPharmHitValidation.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RemicadePhysicianOrder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RemicadePhysicianOrder.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SoluMedrolForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SoluMedrolForm.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ZoledronicAcidPhysicianOrder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ZoledronicAcidPhysicianOrder.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
